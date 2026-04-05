@@ -1,41 +1,14 @@
 services:
-  # 1. MySQL Database (Private Service)
-  - type: pserv
-    name: mysql-db
-    env: image
-    image:
-      url: mysql:8.0
-    disk:
-      name: mysql-data
-      mountPath: /var/lib/mysql
-      sizeGB: 1
-    envVars:
-      - key: MYSQL_DATABASE
-        value: email_filter_db
-      - key: MYSQL_ROOT_PASSWORD
-        generateValue: true
 
-  # 2. Spring Boot Backend
+  # 1. Spring Boot Backend
   - type: web
     name: backend-api
     env: docker
     rootDir: back-end
     envVars:
-      # Database connection variables
-      - key: DB_HOST
-        fromService:
-          type: pserv
-          name: mysql-db
-          envVarKey: RENDER_DISCOVERY_NAME
-      - key: DB_USERNAME
-        value: root
-      - key: DB_PASSWORD
-        fromService:
-          type: pserv
-          name: mysql-db
-          envVarKey: MYSQL_ROOT_PASSWORD
-      - key: DB_URL
-        value: jdbc:mysql://${DB_HOST}:3306/email_filter_db?useSSL=false&serverTimezone=UTC
+      # Database connection variables will be provided manually via Render Dashboard
+      # DB_URL format: jdbc:mysql://YOUR-EXTERNAL-HOST:3306/email_filter_db?useSSL=true&serverTimezone=UTC
+      
       # Allowed Origins for CORS will dynamically read the frontend's address
       - key: CORS_ORIGINS
         fromService:
@@ -43,7 +16,7 @@ services:
           name: frontend-web
           envVarKey: RENDER_EXTERNAL_URL
           
-  # 3. React/Vite Frontend
+  # 2. React/Vite Frontend
   - type: web
     name: frontend-web
     env: static
