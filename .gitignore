@@ -1,0 +1,27 @@
+# Root Gitignore
+
+# Front-end
+front-end/node_modules
+front-end/dist
+front-end/.env
+front-end/.env.local
+front-end/npm-debug.log
+
+# Front-end temp (backup)
+front-end-temp/
+
+# Back-end
+back-end/target/
+back-end/*.log
+back-end/startup_error*.log
+
+# IDEs
+.idea/
+.vscode/
+*.iml
+
+# OS
+.DS_Store
+
+# Root env files
+.env

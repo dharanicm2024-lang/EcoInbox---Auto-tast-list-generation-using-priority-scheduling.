@@ -1,0 +1,56 @@
+﻿[INFO] Error stacktraces are turned on.
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------< com.emailfilter:email-filter >--------------------
+[INFO] Building email-filter 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.3.2:clean (default-clean) @ email-filter ---
+[INFO] Deleting C:\EcoInbox\email-filter\email-filter\back-end\target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ email-filter ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ email-filter ---
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 32 source files with javac [debug release 21] to target\classes
+.\mvnw.cmd : WARNING: A terminally deprecated method in 
+sun.misc.Unsafe has been called
+At line:1 char:1
++ .\mvnw.cmd clean package -DskipTests -e 2>&1 | 
+Out-File 'c:\EcoInbox\ ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (WARNING: A 
+    term...has been called:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+WARNING: sun.misc.Unsafe::objectFieldOffset has been 
+called by lombok.permit.Permit
+WARNING: Please consider reporting this to the 
+maintainers of class lombok.permit.Permit
+WARNING: sun.misc.Unsafe::objectFieldOffset will be 
+removed in a future release
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ email-filter ---
+[INFO] skip non existing resourceDirectory C:\EcoInbox\email-filter\email-filter\back-end\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ email-filter ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.1.2:test (default-test) @ email-filter ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.3.0:jar (default-jar) @ email-filter ---
+[INFO] Building jar: C:\EcoInbox\email-filter\email-filter\back-end\target\email-filter-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot:3.2.4:repackage (repackage) @ email-filter ---
+[INFO] Replacing main artifact C:\EcoInbox\email-filter\email-filter\back-end\target\email-filter-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to C:\EcoInbox\email-filter\email-filter\back-end\target\email-filter-0.0.1-SNAPSHOT.jar.original
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  13.202 s
+[INFO] Finished at: 2026-04-02T08:46:36+05:30
+[INFO] ------------------------------------------------------------------------
