@@ -5,6 +5,8 @@ services:
     name: backend-api
     env: docker
     rootDir: back-end
+    dockerfilePath: Dockerfile
+    dockerContext: .
     envVars:
       # Database connection variables will be provided manually via Render Dashboard
       # DB_URL format: jdbc:mysql://YOUR-EXTERNAL-HOST:3306/email_filter_db?useSSL=true&serverTimezone=UTC
